@@ -30,4 +30,3 @@ jobs:
       with:
         message: 'NPM build HTML files'
         add: 'wled00'
-        new-branch: 'HTML-Update'
