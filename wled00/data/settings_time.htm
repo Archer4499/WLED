@@ -9,7 +9,7 @@
 	var loc = false, locip, locproto = "http:";
 	var el=false;
 	var ms=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-	function H() { window.open("https://kno.wled.ge/features/settings/#time-settings"); }
+	function H() { return; }
 	function B() { window.open(getURL("/settings"),"_self"); }
 	function gId(s) { return d.getElementById(s); }
 	function gN(s) { return d.getElementsByName(s)[0]; }
@@ -37,7 +37,7 @@
 			loc = true;
 			locip = localStorage.getItem('locIp');
 			if (!locip) {
-				locip = prompt("File Mode. Please enter WLED IP!");
+				locip = prompt("File Mode. Please enter Controller IP!");
 				localStorage.setItem('locIp', locip);
 			}
 		} else {
@@ -163,7 +163,7 @@
 <body onload="S()">
 	<form id="form_s" name="Sf" method="post" onsubmit="Wd()">
 		<div class="toprow">
-		<div class="helpB"><button type="button" onclick="H()">?</button></div>
+
 		<button type="button" onclick="B()">Back</button><button type="submit">Save</button><hr>
 		</div>
 		<h2>Time setup</h2>
@@ -200,8 +200,6 @@
 		Current local time is <span class="times">unknown</span>.<br>
 		Latitude: <select name="LTR"><option value="N">N</option><option value="S">S</option></select><input name="LT" type="number" class="xl" min="0" max="66.6" step="0.01"><br>
 		Longitude: <select name="LNR"><option value="E">E</option><option value="W">W</option></select><input name="LN" type="number" class="xl" min="0" max="180" step="0.01"><br>
-		<button type="button" id="locbtn" onclick="getLoc()">Get location</button>
-		<div><i>(opens new tab, only works in browser)</i></div>
 		<div id="sun" class="times"></div>
 		<h3>Clock</h3>
 		Analog Clock overlay: <input type="checkbox" name="OL" onchange="Cs()"><br>
@@ -216,8 +214,7 @@
 		Date:&nbsp;<nowrap>20<input name="CY" class="xs" type="number" min="0" max="99" required>-<input name="CI" class="xs" type="number" min="1" max="12" required>-<input name="CD" class="xs" type="number" min="1" max="31" required></nowrap><br>
 		Time:&nbsp;<nowrap><input name="CH" class="xs" type="number" min="0" max="23" required>:<input name="CM" class="xs" type="number" min="0" max="59" required>:<input name="CS" class="xs" type="number" min="0" max="59" required></nowrap><br>
 		<h3>Macro presets</h3>
-		<b>Macros have moved!</b><br>
-		<i>Presets now also can be used as macros to save both JSON and HTTP API commands.<br>
+		<i>Presets can also be used as macros to save both JSON and HTTP API commands.<br>
 		Just enter the preset ID below!</i>
 		<i>Use 0 for the default action instead of a preset</i><br>
 		Alexa On/Off Preset: <input name="A0" class="m" type="number" min="0" max="250" required> <input name="A1" class="m" type="number" min="0" max="250" required><br>
@@ -236,7 +233,6 @@
 			<tbody>
 			</tbody>
 		</table>
-		<a href="https://kno.wled.ge/features/macros/#analog-button" target="_blank">Analog Button setup</a>
 		<h3>Time-controlled presets</h3>
 		<div style="display: inline-block">
 		<table id="TMT" style="min-width:330px;"></table>

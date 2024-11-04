@@ -12,7 +12,7 @@
 		d.max_gpio = 50;
 		var customStarts=false,startsDirty=[],maxCOOverrides=5;
 		var loc = false, locip, locproto = "http:";
-		function H(){window.open("https://kno.wled.ge/features/settings/#led-settings");}
+		function H(){return;}
 		function B(){window.open(getURL("/settings"),"_self");}
 		function gId(n){return d.getElementById(n);}
 		function off(n){d.getElementsByName(n)[0].value = -1;}
@@ -686,7 +686,7 @@ Length: <input type="number" name="XC${i}" id="xc${i}" class="l" min="1" max="65
 <body onload="S()">
 	<form id="form_s" name="Sf" method="post">
 		<div class="toprow">
-		<div class="helpB"><button type="button" onclick="H()">?</button></div>
+
 		<button type="button" onclick="B()">Back</button><button type="submit">Save</button><hr>
 		</div>
 		<h2>LED &amp; Hardware setup</h2>

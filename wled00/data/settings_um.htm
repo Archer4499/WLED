@@ -18,7 +18,7 @@
 	var numM = 0;
 	function gId(s) { return d.getElementById(s); }
 	function isO(i) { return (i && typeof i === 'object' && !Array.isArray(i)); }
-	function H() { window.open("https://github.com/Aircoookie/WLED/wiki/Settings#usermod-settings"); }
+	function H() { return; }
 	function B() { window.open(getURL("/settings"),"_self"); }
 	// https://www.educative.io/edpresso/how-to-dynamically-load-a-js-file-in-javascript
 	function loadJS(FILE_URL, async = true) {
@@ -318,7 +318,7 @@
 <body onload="S()">
 	<form id="form_s" name="Sf" method="post" onsubmit="svS(event)">
 		<div class="toprow">
-		<div class="helpB"><button type="button" onclick="H()">?</button></div>
+
 		<button type="button" onclick="B()">Back</button><button type="submit">Save</button><br>
 		<span id="lssuc" style="color:green; display:none">&#10004; Configuration saved!</span>
 		<span id="lserr" style="color:red; display:none">&#9888; Could not load configuration.</span><hr>

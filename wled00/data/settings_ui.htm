@@ -192,7 +192,7 @@
 			loc = true;
 			locip = localStorage.getItem('locIp');
 			if (!locip) {
-				locip = prompt("File Mode. Please enter WLED IP!");
+				locip = prompt("File Mode. Please enter Controller IP!");
 				localStorage.setItem('locIp', locip);
 			}
 		} else {
@@ -211,7 +211,7 @@
 	function getURL(path) {
 		return (loc ? locproto + "//" + locip : "") + path;
 	}
-	function H() { window.open("https://kno.wled.ge/features/settings/#user-interface-settings"); }
+	function H() { return; }
 	function B() { window.open(getURL("/settings"),"_self"); }
 	function UI()
 	{
@@ -253,7 +253,6 @@
 <body onload="S()">
 	<form id="form_s" name="Sf" method="post">
 		<div class="toprow">
-		<div class="helpB"><button type="button" onclick="H()">?</button></div>
 		<button type="button" onclick="B()">Back</button><button type="button" onclick="Save()">Save</button><br>
 		<span id="lssuc" style="color:green; display:none">&#10004; Local UI settings saved!</span>
 		<span id="lserr" style="color:red; display:none">&#9888; Could not access local storage. Make sure it is enabled in your browser.</span><hr>
@@ -265,8 +264,8 @@
 			<i class="warn">This firmware build does not include simplified UI support.<br></i>
 		</div>
 		<div id="Simple">Enable simplified UI: <input type="checkbox" name="SU"><br></div>
-		<i>The following UI customization settings are unique both to the WLED device and this browser.<br>
-		You will need to set them again if using a different browser, device or WLED IP address.<br>
+		<i>The following UI customization settings are unique both to the Controller and this browser.<br>
+		You will need to set them again if using a different browser, device or Controller IP address.<br>
 		Refresh the main UI to apply changes.</i><br>
 		
 		<div id="gen">Loading settings...</div>
