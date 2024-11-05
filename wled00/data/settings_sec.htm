@@ -69,7 +69,7 @@
 				loc = true;
 				locip = localStorage.getItem('locIp');
 				if (!locip) {
-					locip = prompt("File Mode. Please enter WLED IP!");
+					locip = prompt("File Mode. Please enter the controller IP!");
 					localStorage.setItem('locIp', locip);
 				}
 			} else {
@@ -127,7 +127,7 @@
 		<a class="btn lnk" id="bckpresets" href="/cfg.json" download="cfg">Backup configuration</a><br>
 		<div>Restore configuration<br><input type="file" name="data2" accept=".json"> <button type="button" onclick="uploadFile(d.Sf.data2,'/cfg.json');">Upload</button><br></div>
 		<div class="warn">&#9888; Restoring presets/configuration will OVERWRITE your current presets/configuration.<br>
-		Incorrect configuration may require a factory reset or re-flashing of your ESP.</div>
+		Incorrect configuration may require a factory reset or re-flashing of your controller.</div>
 		For security reasons, passwords are not backed up.
 		<hr>
 		<h3>About</h3>
