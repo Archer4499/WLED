@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Archer4499/WLED.git"
+    "url": "git+https://github.com/Light-Innovations/Starfall-Firmware.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Archer4499/WLED/issues"
+    "url": "https://github.com/Light-Innovations/Starfall-Firmware/issues"
   },
-  "homepage": "https://github.com/Archer4499/WLED#readme",
+  "homepage": "https://github.com/Light-Innovations/Starfall-Firmware#readme",
   "dependencies": {
     "clean-css": "^5.3.3",
     "html-minifier-terser": "^7.2.0",
