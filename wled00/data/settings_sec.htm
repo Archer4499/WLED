@@ -37,7 +37,6 @@
 <body onload="S()">
 	<form id="form_s" name="Sf" method="post">
 		<div class="toprow">
-		<div class="helpB"><button type="button" onclick="H('features/settings/#security-settings')">?</button></div>
 		<button type="button" onclick="B()">Back</button><button type="submit">Save</button><hr>
 		</div>
 		<h2>Security & Update setup</h2>
@@ -60,7 +59,7 @@
 		<hr id="backup">
 		<h3>Backup & Restore</h3>
 		<div class="warn">&#9888; Restoring presets/configuration will OVERWRITE your current presets/configuration.<br>
-		Incorrect upload or configuration may require a factory reset or re-flashing of your ESP.<br>
+		Incorrect upload or configuration may require a factory reset or re-flashing of your controller.<br>
 		For security reasons, passwords are not backed up.</div>
 		<a class="btn lnk" id="bckcfg" href="/presets.json" download="presets">Backup presets</a><br>
 		<div>Restore presets<br><input type="file" name="data" accept=".json"> <button type="button" onclick="uploadFile(d.Sf.data,'/presets.json');">Upload</button><br></div><br>
@@ -68,11 +67,12 @@
 		<div>Restore configuration<br><input type="file" name="data2" accept=".json"> <button type="button" onclick="uploadFile(d.Sf.data2,'/cfg.json');">Upload</button><br></div>
 		<hr>
 		<h3>About</h3>
-		<a href="https://github.com/Aircoookie/WLED/" target="_blank">WLED</a>&#32;version ##VERSION##<!-- Autoreplaced from package.json --><br><br>
-		<a href="https://github.com/Aircoookie/WLED/wiki/Contributors-and-credits" target="_blank">Contributors, dependencies and special thanks</a><br>
-		A huge thank you to everyone who helped me create WLED!<br><br>
+		<a href="https://github.com/Archer4499/WLED/" target="_blank">Light Innovations Controller</a>&#32;version ##VERSION##<!-- Autoreplaced from package.json --><br><br>
+		Copyright (c) 2024- Light Innovations <br><br>
+		Adapted from original software:<br>
 		(c) 2016-2024 Christian Schwinne <br>
-		<i>Licensed under the <a href="https://github.com/Aircoookie/WLED/blob/master/LICENSE" target="_blank">EUPL v1.2 license</a></i><br><br>
+		<i>Licensed under the <a href="https://github.com/Aircoookie/WLED/blob/master/LICENSE" target="_blank">EUPL v1.2 license</a></i><br>
+		<a href="https://github.com/Aircoookie/WLED/wiki/Contributors-and-credits" target="_blank">Contributors, dependencies and special thanks</a><br><br>
 		Server message: <span class="sip"> Response error! </span><hr>
 		<div id="toast"></div>
 		<button type="button" onclick="B()">Back</button><button type="submit">Save</button>
